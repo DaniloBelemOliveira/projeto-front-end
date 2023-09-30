@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: #FFF;
+}
+.img{
+    border-bottom: 1px 2f3356 solid;
+    height: 30px;
+    z-index: 99;
+}
+.border{
+    border: 1px solid red;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    padding:40px 10px  30px 10px;
+    border-right:1px solid  #2f3356;
+}
+.sidebar button{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family:inherit ;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+.sidebar button > span{
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    gap: 12px;
+    padding: 0px 16px 0px 12px;
+    border-radius: 24px;
+    transition: all 0.3s;
+}
+.sidebar button:hover >span{
+    background-color: #2f3356;
+}
+.sidebar button i{
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+.sidebar button span{
+    font-size:16px;
+}
+.sidebar > nav{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px #2f3356 solid;
+    
+}
+.main{
+    margin-left: 240px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+.tela{
+    background-color: #212331;
+    height:100vh;
+    width: auto;
+}
+@media (width<500px){
+    .sidebar{
+        width: 75px;
+    }
+    .sidebar button > span{
+        width: 50px;
+    }
+    .sidebar button > span> span{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .main{
+        transition: margin 0.4s;
+        margin-left: 75px;
+    }
+}
+/*Configuranções para dispositivos mobile*/
+.button-mobile{
+    display: none;
+    align-self: flex-start;
+    align-items: center;
+    margin: 16px;
+    background: transparent;
+    color: #FFF;
+    border: 0;
+}
+.menu-mobile{
+    display: none;
+}
+.menu-mobile-activy{
+    width: 100vw;
+    height: 100vh;
+    background-color: #212331;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.menu-mobile-activy button{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    margin-bottom: 16px;
+}
+.menu-mobile-activy button > span{
+    display: flex;
+    align-items: center;
+}
+.monbile-text{
+    font-size: 22px;
+    margin-left: 8px;
+}
+.button-close span i{
+    font-size: 40px;
+}
+@media (max-width:480px){
+    .sidebar{
+        display: none;
+    }
+    body{
+        transition: all 0.4s;
+    background-color: #212331;;
+    }
+    .button-mobile{
+        display: flex;
+    }
+    .button-mobile span{
+        font-size: 20px;
+        margin-left: 6px;
+    }
+    .main{
+        margin-left: 6px;
+    }
+    .tela{
+        background-color: #000000;
+        height:100vh;
+        width: 100vw;
+    }
+}
