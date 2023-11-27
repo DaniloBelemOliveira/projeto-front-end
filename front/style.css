@@ -1,0 +1,30 @@
+#projetos{
+    width: auto;
+    height: 100vh;
+    background-color: #F5EF00;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.caixa{
+    margin: 10px;
+    width: 30%;
+    background-color: rgb(247, 247, 247);
+    height: 80%;
+    border: 2px solid black;
+    display: inline-block;
+}
+#projeto1{
+    position: absolute;
+    left: 0;
+}
+#projeto2{
+    position: absolute; 
+    top: 48.5%; left: 50%; 
+    transform: translate(-50%, -50%);
+}
+#projeto3{
+    position: absolute;
+    right: 0;
+}
